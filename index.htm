@@ -1,0 +1,176 @@
+<html lang="en-150">
+    <head>
+        <title>News Measure-converter-rer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400+700" rel="stylesheet">
+        <style type="text/css">
+
+body {
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+label {
+    border-radius: 8px;
+    background: #EAF7FF;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    color: #003d62;
+    align-items: center;
+    justify-content: center;
+}
+label > span {
+    display: block;
+    flex: 0 0 80px;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    line-height: 48px;
+    padding: 0 10px;
+    
+    opacity: 0.9;
+}
+
+label > svg {
+    display: none;
+}
+
+input {
+    align-self: flex-end;
+    border: 1px solid transparent;
+    background: #fbfdff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: opacity 0.9s;
+    width: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: #003d62;
+    opacity: 0.7;
+    font-weight: 700;
+}
+
+input:focus {
+    border-color: #84d0ff;
+    background: #fff;
+    outline: 0;
+}
+
+.sep {
+    width: 40px;
+    text-align: center;
+    margin: 0 auto;
+}
+.sep svg {
+    height: 60px;
+    opacity: 0.6;
+}
+
+@media (min-width: 500px) {
+    label > svg {
+        display: block;
+        flex: 0 0 20px;
+        margin: 10px;
+    }
+}
+</style>
+    </head
+    <body>
+        <div class="calc js-distance">
+            <div class="col">
+                <label>
+                    <span>Miles</span>
+                     <input type="text" name="miles" class="js-miles" pattern="\d{1,3}(?:,\d{3})+|(?=.{1,8}$)\d+">
+                </label>
+                <label>
+                    <span>Km</span> <input type="text" name="km" class="js-km" pattern="\d{1,3}(?:,\d{3})+|(?=.{1,8}$)\d+">
+                </label>
+            </div>
+            <div class="sep">
+                <svg aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down fa-w-10 fa-3x"><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path></svg>
+            </div>
+            <div class="col">
+                <label>
+                    <span>Buses</span> <input type="text" name="buses" class="js-buses">
+                    <svg aria-hidden="true" data-prefix="fas" data-icon="bus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-bus fa-w-16 fa-3x"><path fill="currentColor" d="M488 128h-8V80c0-44.8-99.2-80-224-80S32 35.2 32 80v48h-8c-13.25 0-24 10.74-24 24v80c0 13.25 10.75 24 24 24h8v160c0 17.67 14.33 32 32 32v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h192v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h6.4c16 0 25.6-12.8 25.6-25.6V256h8c13.25 0 24-10.75 24-24v-80c0-13.26-10.75-24-24-24zM112 400c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm16-112c-17.67 0-32-14.33-32-32V128c0-17.67 14.33-32 32-32h256c17.67 0 32 14.33 32 32v128c0 17.67-14.33 32-32 32H128zm272 112c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z" class=""></path></svg>
+                </label>
+                <label>
+                    <span>Pitches</span> <input type="text" name="pitches" class="js-pitches">
+                    <svg aria-hidden="true" data-prefix="fas" data-icon="futbol" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-futbol fa-w-16 fa-3x"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zm-48 0l-.003-.282-26.064 22.741-62.679-58.5 16.454-84.355 34.303 3.072c-24.889-34.216-60.004-60.089-100.709-73.141l13.651 31.939L256 139l-74.953-41.525 13.651-31.939c-40.631 13.028-75.78 38.87-100.709 73.141l34.565-3.073 16.192 84.355-62.678 58.5-26.064-22.741-.003.282c0 43.015 13.497 83.952 38.472 117.991l7.704-33.897 85.138 10.447 36.301 77.826-29.902 17.786c40.202 13.122 84.29 13.148 124.572 0l-29.902-17.786 36.301-77.826 85.138-10.447 7.704 33.897C442.503 339.952 456 299.015 456 256zm-248.102 69.571l-29.894-91.312L256 177.732l77.996 56.527-29.622 91.312h-96.476z" class=""></path></svg>
+                </label>
+                <label>
+                    <span>Jumbos</span> <input type="text" name="pitches" class="js-jumbos">
+                    <svg aria-hidden="true" data-prefix="fas" data-icon="plane" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-plane fa-w-18 fa-3x"><path fill="currentColor" d="M480 192H365.71L260.61 8.06A16.014 16.014 0 0 0 246.71 0h-65.5c-10.63 0-18.3 10.17-15.38 20.39L214.86 192H112l-43.2-57.6c-3.02-4.03-7.77-6.4-12.8-6.4H16.01C5.6 128-2.04 137.78.49 147.88L32 256 .49 364.12C-2.04 374.22 5.6 384 16.01 384H56c5.04 0 9.78-2.37 12.8-6.4L112 320h102.86l-49.03 171.6c-2.92 10.22 4.75 20.4 15.38 20.4h65.5c5.74 0 11.04-3.08 13.89-8.06L365.71 320H480c35.35 0 96-28.65 96-64s-60.65-64-96-64z" class=""></path></svg>
+                </label>
+            </div>
+        </div>
+<script>
+var distanceCalc = {
+    Init: function() {
+
+        this.container = document.querySelector('.js-distance');
+        this.miles = this.container.querySelector('.js-miles');
+        this.km = this.container.querySelector('.js-km');
+        this.buses = this.container.querySelector('.js-buses');
+        this.pitches = this.container.querySelector('.js-pitches');
+        this.jumbos = this.container.querySelector('.js-jumbos');
+
+        this.fromStrRegex = /[.,\s]/g;
+        this.kmVal = 0;
+
+        this.miles.addEventListener('change', function(e) {
+            if (e.target.value !== '') {
+                this.kmVal = (e.target.value.replace(this.fromStrRegex, '') * 1.60934).toFixed(2);
+                e.target.value = this.toFormat(e.target.value);
+                this.km.value = this.toFormat(this.kmVal);
+                this.updateFromKms();
+            }
+        }.bind(this));
+
+        this.km.addEventListener('change', function(e) {
+            if (e.target.value !== '') {
+                this.kmVal = e.target.value.replace(this.fromStrRegex, '');
+                this.km.value = this.toFormat(this.kmVal);
+                this.miles.value = this.toFormat((this.kmVal * 0.621371).toFixed(2));
+                this.updateFromKms();
+            }
+        }.bind(this));
+    },
+
+    updateFromKms: function() {
+        this.buses.value = this.toFormat(this.kmToBuses(this.kmVal));
+        this.pitches.value = this.toFormat(this.kmToPitches(this.kmVal));
+        this.jumbos.value = this.toFormat(this.kmToJumbos(this.kmVal));
+    },
+
+    kmToBuses: function(km) {
+        return (km * 119.904076739).toFixed(2);
+    },
+
+    kmToPitches: function(km) {
+        return (km * 9.52380952381).toFixed(2);
+    },
+
+    kmToJumbos: function(km) {
+        return (km * 14.598540146).toFixed(2);
+    },
+
+    toFormat: function(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+}
+
+distanceCalc.Init();
+</script>
+    </body>
+</html>
